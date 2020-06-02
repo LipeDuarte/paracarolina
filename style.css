@@ -1,0 +1,185 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;   
+}
+
+body
+{
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Caladea', serif;
+    font-size: 18px;
+}
+
+header
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.nome 
+{
+    color: #ffffff;
+    background-color: #f185b3;
+}
+
+.nome h1
+{
+    font-size: 5em;
+    font-family: 'Rubik', sans-serif;
+    text-align: center;
+    max-width: 55vw; 
+}
+
+.nome h2
+{
+    margin-top: 2em;
+    font-style: italic;
+    text-align: center;
+}
+
+.dedicatória
+{
+    background-color: whitesmoke;
+    color: black;
+    font-size: 1em;
+    font-style: italic;
+}
+
+.prólogo
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start ;
+    background-color: #3d0043;
+    color: whitesmoke;
+    height:200vh;
+}
+
+.prólogo .título
+{
+    padding-left: 15vw;
+    padding-top: 5vh;
+    margin-bottom: 18vh;
+}
+
+.foto img 
+{
+    height:420px;
+    width: 315px;
+    border: solid 4px whitesmoke;
+}
+
+.danca img 
+{
+    height: 294px;
+    width: 520px;
+    border: solid 4px whitesmoke;
+}
+
+.foto, .danca
+{
+    transition: transform 1s ;
+}
+
+.foto:hover
+{
+    transform: scale(1.3) rotate(-2deg);
+}
+
+.danca:hover
+{
+    transform: scale(1.2) rotate(-2deg);
+}
+
+figure
+{
+    margin-left: 20vw;
+    display: flex;
+    align-items: center;
+    transition: transform 1s ;
+}
+
+.video
+{
+    margin-left: 13vw;
+}
+
+.danca
+{
+    display: flex;
+    align-items: center;
+    transition: transform 1s ;
+}
+
+figcaption
+{
+    font-size: 1.3em;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 800;
+    padding-left: 2.4em;
+    display: flex;
+    flex-direction: column;
+}
+
+.legenda
+{
+    opacity: 0;
+    transform: translate3d(-20vw, 0, 0);
+    transition: 1s;
+}
+
+.legenda h2
+{
+    margin-bottom: 1em;
+}
+
+.anime-start
+{
+    opacity: 1;
+    transform: translate3d( 0, 0, 0);
+}
+
+.linha
+{
+    height: 594px;
+    padding-left: 155;
+    padding-right: 155;
+    opacity: 0;
+    text-shadow: 0px 0px 10px rgba(255,255,255,.5) ;
+}
+
+.linha_anime
+{
+    opacity: 0;
+    transform: translateY(-20vh) scale(0.05);
+    animation: 2s ease 500ms animacaoLinha forwards;
+}
+
+@keyframes animacaoLinha
+{
+    from
+    {
+        transform: translateY(-10em) scale(0.05);
+        opacity: 0;
+    }
+    to
+    {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+}
+
+.cap1
+{
+    background-color: black;
+    height: 100vh;
+}
