@@ -60,7 +60,7 @@ header
     align-items: flex-start ;
     background-color: #3d0043;
     color: whitesmoke;
-    height:200vh;
+    height: 440vh;
 }
 
 .prólogo .título
@@ -70,7 +70,7 @@ header
     margin-bottom: 18vh;
 }
 
-.foto img 
+.foto img
 {
     height:420px;
     width: 315px;
@@ -124,7 +124,6 @@ figcaption
     font-size: 1.3em;
     margin-left: auto;
     margin-right: auto;
-    max-width: 800;
     padding-left: 2.4em;
     display: flex;
     flex-direction: column;
@@ -132,6 +131,7 @@ figcaption
 
 .legenda
 {
+    max-width: 800px;
     opacity: 0;
     transform: translate3d(-20vw, 0, 0);
     transition: 1s;
@@ -150,7 +150,7 @@ figcaption
 
 .linha
 {
-    height: 591px;
+    height: 594px;
     padding-left: 155px;
     padding-right: 155px;
     opacity: 0;
@@ -178,8 +178,88 @@ figcaption
     }
 }
 
+.segredo
+{
+    background-color: #3d0043;
+    height: 600px;
+    width: 99vw;
+}
+
+.botao
+{
+    display: flex;
+    justify-content: start;
+    background-color: #3d0043;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    margin-left: 15vw;
+    font-size: 2em;
+    color: whitesmoke;
+    transition: text-shadow 1.5s, color 1s, background-color 1s;
+}
+
+.botao:hover
+{
+    color: white;
+    text-shadow: 0px 0px 10px whitesmoke;  
+}
+
+.especial
+{
+    display: none;
+    opacity: 0;
+    margin: 1em;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1000px;
+    border: 5px solid whitesmoke;
+    animation: 1s ease 500ms animacao forwards;
+}
+
+.especial p
+{
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2em;
+}
+
+.especial h2
+{
+    padding: 2em;
+}
+
+@keyframes animacao
+{
+    from
+    {
+        transform: translateY(-5vh);
+        background-color: #3d0043;
+        opacity: 0;
+    }
+    to
+    {
+        transform: translateY(0);
+        background-color: #90007f;
+        opacity: 1;
+    }
+}
+
+.animado
+{
+    transition: text-shadow 1s;
+    text-shadow: 0px 0px 10px whitesmoke;    
+}
+
+
 .cap1
 {
     background-color: black;
     height: 100vh;
+}
+
+button:focus
+{
+    box-shadow: 0 0 0 0;
+    outline: 0;
 }

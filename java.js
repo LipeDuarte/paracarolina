@@ -60,7 +60,7 @@ debounce = function(func, wait, immediate) {
         $target.each(function()
         {
 			var itemTop = $(this).offset().top;
-            if (documentTop > itemTop - 400) 
+            if (documentTop > itemTop - 700) 
             {
 				$(this).addClass(animationClass);
             } else 
@@ -78,3 +78,21 @@ debounce = function(func, wait, immediate) {
 		animeLinha();
 	}, 200));
 })();
+
+var btn = document.getElementById('botao');
+var container = document.querySelector('.especial');
+var animationBotao = 'animado'
+btn.addEventListener('click', function() 
+{
+    
+  if(container.style.display === 'none') 
+  {
+	  container.style.display = 'block';
+	  $(this).addClass(animationBotao);
+  } 
+  else
+	{
+	  container.style.display = 'none';
+	  $(this).removeClass(animationBotao);
+  }
+});
