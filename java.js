@@ -205,19 +205,19 @@ botaozito.addEventListener('click', function()
   }
 });
 
-var bot = document.getElementById('botin');
-var especiale = document.querySelector('.especialin');
-bot.addEventListener('click', function() 
+var botin = document.getElementById('botin');
+var especialin = document.querySelector('.especialin');
+botin.addEventListener('click', function() 
 {
     
   if(especiale.style.display == 'none') 
   {
-	  especiale.style.display = 'flex';
+	  especialin.style.display = 'flex';
 	  $(this).addClass(animationBotao);
   } 
   else
 	{
-	  especiale.style.display = 'none';
+	  especialin.style.display = 'none';
 	  $(this).removeClass(animationBotao);
   }
 });
