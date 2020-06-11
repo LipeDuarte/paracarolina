@@ -69,23 +69,97 @@ debounce = function(func, wait, immediate) {
 			}
 		});
     }
-    
-
-
-	animeLinha();
 
 	$(document).scroll(debounce(function(){
 		animeLinha();
 	}, 200));
 })();
 
-var btn = document.getElementById('botao');
-var container = document.querySelector('.especial');
+(function()
+         {
+	var $target = $('.pontos'),
+			animationClass = 'pontos_anime';
+
+    function animePonto() 
+    {
+		var documentTop = $(document).scrollTop();
+
+        $target.each(function()
+        {
+			var itemTop = $(this).offset().top;
+            if (documentTop > itemTop - 700) 
+            {
+				$(this).addClass(animationClass);
+            } else 
+            {
+				$(this).removeClass(animationClass);
+			}
+		});
+    }
+
+	$(document).scroll(debounce(function(){
+		animePonto();
+	}, 200));
+})();
+
+
+(function()
+         {
+	var $target = $('.data'),
+			animationClass = 'datanimada';
+
+    function animeData() 
+    {
+		var documentTop = $(document).scrollTop();
+
+        $target.each(function()
+        {
+			var itemTop = $(this).offset().top;
+            if (documentTop > itemTop - 600) 
+            {
+				$(this).addClass(animationClass);
+            } else 
+            {
+				$(this).removeClass(animationClass);
+			}
+		});
+    }
+    
+
+
+	animeData();
+
+	$(document).scroll(debounce(function(){
+		animeData();
+	}, 200));
+})();
+
+
+
+var botao = document.getElementById('botao');
+var conteiner = document.querySelector('.especial');
 var animationBotao = 'animado'
+botao.addEventListener('click', function() 
+{
+    
+  if(conteiner.style.display == 'none') 
+  {
+	  conteiner.style.display = 'block';
+	  $(this).addClass(animationBotao);
+  } 
+  else
+	{
+	  conteiner.style.display = 'none';
+	  $(this).removeClass(animationBotao);
+  }
+});
+
+var btn = document.getElementById('button');
+var container = document.querySelector('.special');
 btn.addEventListener('click', function() 
 {
     
-  if(container.style.display === 'none') 
+  if(container.style.display == 'none') 
   {
 	  container.style.display = 'block';
 	  $(this).addClass(animationBotao);
@@ -96,3 +170,87 @@ btn.addEventListener('click', function()
 	  $(this).removeClass(animationBotao);
   }
 });
+
+var bot = document.getElementById('bot');
+var especiale = document.querySelector('.especiale');
+bot.addEventListener('click', function() 
+{
+    
+  if(especiale.style.display == 'none') 
+  {
+	  especiale.style.display = 'flex';
+	  $(this).addClass(animationBotao);
+  } 
+  else
+	{
+	  especiale.style.display = 'none';
+	  $(this).removeClass(animationBotao);
+  }
+});
+
+var botaozito = document.getElementById('botaozito');
+var especialzito = document.querySelector('.especialzito');
+botaozito.addEventListener('click', function() 
+{
+    
+  if(especialzito.style.display == 'none') 
+  {
+	  especialzito.style.display = 'block';
+	  $(this).addClass(animationBotao);
+  } 
+  else
+	{
+	  especialzito.style.display = 'none';
+	  $(this).removeClass(animationBotao);
+  }
+});
+
+var bot = document.getElementById('botin');
+var especiale = document.querySelector('.especialin');
+bot.addEventListener('click', function() 
+{
+    
+  if(especiale.style.display == 'none') 
+  {
+	  especiale.style.display = 'flex';
+	  $(this).addClass(animationBotao);
+  } 
+  else
+	{
+	  especiale.style.display = 'none';
+	  $(this).removeClass(animationBotao);
+  }
+});
+
+(function()
+         {
+	var $target = $('.fas'),
+			animationClass = 'animacaoEstrela';
+
+    function animeEstrela() 
+    {
+		var documentTop = $(document).scrollTop();
+
+        $target.each(function()
+        {
+			var itemTop = $(this).offset().top;
+            if (documentTop > itemTop - 600) 
+            {
+				$(this).addClass(animationClass);
+            } else 
+            {
+				$(this).removeClass(animationClass);
+			}
+		});
+    }
+    
+
+
+	animeEstrela();
+
+	$(document).scroll(debounce(function(){
+		animeEstrela();
+	}, 200));
+})();
+
+

@@ -20,13 +20,14 @@ header
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    color: whitesmoke;    
 }
 
 .nome 
 {
     color: #ffffff;
     background-color: #f185b3;
+    height: 100vh;
 }
 
 .nome h1
@@ -48,26 +49,30 @@ header
 {
     background-color: whitesmoke;
     color: black;
+    height: 110vh;
     font-size: 1em;
     font-style: italic;
 }
 
 .prólogo
 {
+    background-color: #90007f;
+    height: 450vh;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start ;
-    background-color: #3d0043;
-    color: whitesmoke;
-    height: 440vh;
 }
 
-.prólogo .título
+.prólogo, .título, .cap1, .cap2, .cap3, .cap4, .cap5, .cap6, .epílogo, .sobre
 {
-    padding-left: 15vw;
     padding-top: 5vh;
+}
+
+.título
+{
     margin-bottom: 18vh;
+    margin-left: 15vw;
 }
 
 .foto img
@@ -84,7 +89,7 @@ header
     border: solid 4px whitesmoke;
 }
 
-.foto, .danca
+.foto, .danca, .desforme, .especialissimo
 {
     transition: transform 1s ;
 }
@@ -142,6 +147,29 @@ figcaption
     margin-bottom: 1em;
 }
 
+.data 
+{
+    opacity: 0;
+    margin-bottom: 1em;   
+}
+
+.datanimada 
+{
+    animation: 2s animacaoData 500ms forwards;  
+}
+
+@keyframes animacaoData
+{
+    from
+    {
+        opacity: 0;
+    }
+    to
+    {
+        opacity: 1;
+    }
+}
+
 .anime-start
 {
     opacity: 1;
@@ -180,7 +208,7 @@ figcaption
 
 .segredo
 {
-    background-color: #3d0043;
+    background-color: #90007f;
     height: 600px;
     width: 99vw;
 }
@@ -189,7 +217,7 @@ figcaption
 {
     display: flex;
     justify-content: start;
-    background-color: #3d0043;
+    background-color: #90007f;
     margin-top: 2em;
     margin-bottom: 2em;
     margin-left: 15vw;
@@ -213,7 +241,7 @@ figcaption
     margin-right: auto;
     max-width: 1000px;
     border: 5px solid whitesmoke;
-    animation: 1s ease 500ms animacao forwards;
+    animation: 2s ease 500ms animacaoEspecial forwards;
 }
 
 .especial p
@@ -229,7 +257,7 @@ figcaption
     padding: 2em;
 }
 
-@keyframes animacao
+@keyframes animacaoEspecial
 {
     from
     {
@@ -240,7 +268,7 @@ figcaption
     to
     {
         transform: translateY(0);
-        background-color: #90007f;
+        background-color: #d52484;
         opacity: 1;
     }
 }
@@ -254,8 +282,616 @@ figcaption
 
 .cap1
 {
+    background-color: #3d0043;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start ;
+    height: 800vh;
+}
+
+.desforme img
+{
+    height: 560px;
+    width: 315px;
+    margin-left: 0.8em;
+    border: solid 4px whitesmoke;
+}
+
+.desforme:hover
+{
+    transform: scale(1.3) rotate(-2deg);
+}
+
+.cap2
+{
     background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start ;
+    height: 400vh;
+}
+
+.pontos
+{
+    padding: 0;
+    border: 5px solid whitesmoke;
+    margin-top: 1em;
+    margin-left: 152px;
+    margin-right: 158px;
+    margin-bottom: 1em;
+    opacity: 0;
+}
+
+.cantos
+{
+    margin-top: 3em;
+    margin-bottom: 3em;
+}
+
+.pontos_anime
+{
+    opacity: 0;
+    transform: scale(0.05);
+    border-radius: 0%;
+    animation: 2s ease 500ms animacaoPontos forwards;
+}
+
+@keyframes animacaoPontos
+{
+    from
+    {
+        opacity: 0;
+        transform: scale(0.05);
+        border-radius: 0%;
+    }
+    to 
+    {
+        opacity: 1;
+        transform: scale(1);
+        border-radius: 100%;
+    }
+}
+
+.dark
+{
+    border: 4px solid;
+    padding: .5em;
+    font-size: 2em;
+    margin-left: 22.5vw;
+}
+
+.linhazinha .linha
+{
+    height: 200px;
+}
+
+.linhazinha .legenda
+{
+    max-width: 850px;
+}
+
+.cap2 .segredo, .cap3
+{
+    background-color: black;
+}
+
+.cap2 .segredo button
+{
+    margin-left: 22vw;
+    background-color: black;
+}
+
+.dark p
+{
+    margin-bottom: 0;
+}
+
+.special
+{
+    display: none;
+    opacity: 0;
+    color: black;
+    margin: 1em;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1000px;
+    border: 5px solid whitesmoke;
+    background-color: white;
+    animation: 2s ease 500ms animacaoSpecial forwards;
+}
+
+.playlist
+{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 10em;
+    max-width: 800px;
+}
+
+@keyframes animacaoSpecial
+{
+    from
+    {
+        transform: translateY(-5vh);
+        opacity: 0;
+    }
+    to
+    {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.special p
+{
+    color: rgb(102, 102, 102);
+    margin-top: 1em;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2em;
+}
+
+.special h2
+{
+    padding: 2em;
+}
+
+.musica h3
+{
+    font-weight: bold;
+    font-family: Rubik;
+}
+
+.musica
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: solid whitesmoke 4px;
+    background-color: whitesmoke;
+    box-shadow: 11px 11px 50px 5px black;
+    color: black;
+    width: 320px;
+    height: 500px;
+    transform: scale(0.5);
+    transition: transform 1s
+}
+
+.musica:hover
+{
+    transform: scale(1);
+}
+
+.capa 
+{
+    width: 300px;
+    height: 300px;
+    margin-bottom: 2em;
+}
+
+.cap3
+{
+    background-color: rgb(7, 7, 14);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start ;
+    height: 620vh;
+}
+
+.ceu
+{
+    display: flex;
+    flex-direction: row;
+    margin-left: 0;
+}
+
+.espaco
+{
+
+    width: 70vw;
+    margin-left: 9vw;
+    font-size: 1.1em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    transition: transform 1s ;
+}
+
+.estrelado, .estrelado2
+{
+    display: flex;
+    max-height: 400px;
+    flex-direction: column;
+}
+
+.estrela1
+{
+
+    margin-left: 5em;
+    animation: animacaoEstrela 2s infinite; 
+}
+
+.estrela2
+{
+
+    margin-top: 8em;
+    margin-left: 8em;
+    animation: animacaoEstrela 3s infinite; 
+}
+
+.estrela3
+{
+
+    margin-top: 16em;
+    margin-left: 3em;
+    animation: animacaoEstrela 7s infinite; 
+}
+.estrela4
+{
+
+    margin-top: 4em;
+    margin-left: 5em;
+    animation: animacaoEstrela 6s infinite; 
+}
+
+.estrela5
+{
+
+    margin-top: 3em;
+    margin-left: 3em;
+    animation: animacaoEstrela 2s infinite; 
+}
+
+.estrela6
+{
+
+    margin-top: 5em;
+    margin-left: 5em;
+    animation: animacaoEstrela 5s infinite; 
+}
+
+.estrela7
+{
+
+    margin-top: 10em;
+    margin-left: 3em;
+    animation: animacaoEstrela 4s infinite; 
+}
+
+.estrela8
+{
+    margin-top: 8em;
+    margin-left: 2em;
+    animation: animacaoEstrela 1s infinite; 
+}
+
+.especialissimo img
+{
+    margin-left: -3em;
+    height:315px;
+    width: 420px;
+    border: solid 4px whitesmoke;
+}
+
+.especialissimo:hover
+{
+    transform: scale(1.3) rotate(-2deg);
+}
+
+@keyframes animacaoEstrela
+{
+    from
+    {
+        text-shadow: 0px 0px 0px whitesmoke;
+    }
+    to 
+    {
+        text-shadow: 0px 0px 10px whitesmoke;        
+    }
+}
+
+.especiale
+{
+    display: none;
+    opacity: 0;
+    margin: 1em;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 1000px;
+    border: 5px solid whitesmoke;
+    background-color: #142850;
+    animation: 2s ease 500ms animacaoSpecial forwards;
+}
+
+.cap3 .botao
+{
+    margin-left: -5vw;
+    background-color: rgb(7, 7, 14);
+}
+
+.especiale p
+{
+    max-width: 500px;
+    margin-bottom: 2em;
+}
+
+.especiale h2
+{
+    padding: 1em 0em;
+}
+
+.segredin .foto  img
+{
+    height: 170px;
+    width: 300px;
+    margin-top: 7em;
+    margin-bottom: 7em;
+    margin-left: 3em;
+}
+
+.cap4
+{
+    background-color: #3d0043;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start ;
+    height: 810vh;
+}
+
+.especialzito
+{
+    display: none;
+    opacity: 0;
+    margin: 1em;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 1000px;
+    border: 5px solid whitesmoke;
+    animation: 2s ease 500ms animacaoEspecial forwards;
+}
+
+.especialzito pre
+{
+    max-width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2em;
+    font-family: caladea;
+}
+
+.especialzito h2
+{
+    padding: 2em;
+}
+
+.segrede
+{
+    background-color: #3d0043;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.cap4 .botao
+{
+    background-color: #3d0043;
+    margin-left: -3em;
+}
+
+.cap5
+{
+
+    background-color: #90007f;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start ;
+    height: 650vh;
+}
+
+.cap6
+{
+
+    background-color: #d52484;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start ;
+    height: 650vh;
+}
+
+.segredinin
+{
+    background-color: #d52484;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+}
+
+.segredinin button
+{
+    background-color: #d52484;
+    margin-left: -3em;
+}
+
+.especialin
+{
+    display: none;
+    flex-direction:column;
+    justify-content: center;
+    opacity: 0;
+    background-color: #3d0043;
+    padding: 2em;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 1000px;
+    border: 5px solid whitesmoke;
+    animation: 2s ease 500ms animacaoSpecial forwards;
+}
+
+
+.especialin figcaption
+{
+    padding-left: 0;
+}
+
+.especialin p
+{
+    text-align: center;
+}
+
+.especialin .data
+{
+    padding-top: 2.2em;
+    align-self: center;
+}
+
+.especialin .foto
+{
+    align-self: center;
+}
+
+.epílogo
+{
+
+    background-color: #f185b3;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start ;
+    height: 150vh;
+}
+
+.sobre
+{
+    background-color: #ffffff;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start ;
+    height: 150vh;
+}
+
+.sobre .legenda
+{
+    display: flex;
+    align-items: center;
+}
+
+.sobre figure
+{
+    max-width: 1320px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.sobre h2
+{
+    padding: 2em 0em;
+}
+
+.sobre p
+{
+    max-width: 1200px;
+    text-align: center;
+}
+
+.agradecimentos
+{
+    background-color: whitesmoke;
+    color: black;
+    height: 70vh;
+    font-size: 1em;
+}
+
+.agradecimentos h1
+{
+    margin-bottom: 2em;
+}
+
+.agradecimentos p
+{
+    max-width: 500px;
+}
+
+.fim 
+{
     height: 100vh;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+}
+
+.fim h1
+{
+    font-size: 5em;
+    color: rgb(180, 176, 176);
+}
+
+.fim pre
+{
+    color: rgb(206, 201, 201);
+    font-family: caladea;
+    max-width: 380px;
+    margin-left: 67em;
+}
+.heart {
+    margin: 200px;
+    background-color: #f185b3;
+    height: 200px;
+    transform: rotate(-45deg);
+    width: 200px;
+    position: relative;
+    animation: 10s animacaoCoracao infinite;
+}
+
+@keyframes animacaoCoracao
+{
+    0%
+    {
+        transform: scale(1) rotateZ(-45deg)
+    }
+    50% 
+    {
+        transform: scale(1.5)  rotateZ(-45deg);
+    }
+    100%
+    {
+        transform: scale(1)  rotateZ(-45deg);
+    }
+}
+
+.heart:before,
+.heart:after {
+    content: "";
+    background-color: #f185b3;
+    border-radius: 50%;
+    height: 200px;
+    position: absolute;
+    width: 200px;
+}
+
+.heart:before {
+    top: -100px;
+}
+
+.heart:after {
+    left: 100px;
+}
+
+
+
+audio:focus
+{
+    box-shadow: 0 0 0 0;
+    outline: 0;
 }
 
 button:focus
@@ -263,3 +899,12 @@ button:focus
     box-shadow: 0 0 0 0;
     outline: 0;
 }
+
+@media(max-width: 1300px)
+{
+    .prólogo, .cap1, .cap2, .cap3, .cap4, .cap5, .cap6, .epílogo, .sobre
+    {
+        height: auto;
+    }
+}
+
